@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>إبداعك - تواصل معنا</title>
+  <link rel="stylesheet" href="../CSS/shared.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .contact-layout { display: flex; gap: 30px; margin-top: 30px; flex-wrap: wrap; }
+    .contact-form-box { flex: 2; min-width: 300px; background: white; border-radius: 20px; padding: 36px; box-shadow: var(--shadow); }
+    .contact-form-box h2 { font-family: 'Cairo', sans-serif; font-size: 22px; font-weight: 900; color: var(--dark); margin-bottom: 6px; }
+    .contact-form-box p { color: var(--gray); font-size: 14px; margin-bottom: 24px; }
+    .contact-form-box label { display: block; font-weight: 600; font-size: 13px; color: var(--dark); margin-bottom: 6px; }
+    textarea.form-control { height: 140px; resize: vertical; }
+    .contact-info { flex: 1; min-width: 240px; }
+    .info-item { background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow); margin-bottom: 16px; display: flex; gap: 16px; align-items: flex-start; }
+    .info-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; flex-shrink: 0; }
+    .info-text h4 { font-family: 'Cairo', sans-serif; font-weight: 700; color: var(--dark); margin-bottom: 4px; font-size: 15px; }
+    .info-text p { color: var(--gray); font-size: 13px; line-height: 1.6; }
+    .faq-section { margin-top: 50px; }
+    .faq-item { background: white; border-radius: 12px; padding: 20px 24px; box-shadow: var(--shadow); margin-bottom: 12px; cursor: pointer; }
+    .faq-q { display: flex; justify-content: space-between; align-items: center; font-family: 'Cairo', sans-serif; font-weight: 700; color: var(--dark); font-size: 15px; }
+    .faq-a { display: none; color: var(--gray); font-size: 14px; line-height: 1.7; margin-top: 12px; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-arrow { transition: transform 0.3s; color: var(--primary); }
+    .success-msg { display: none; background: #d4edda; color: #155724; border-radius: 10px; padding: 16px; text-align: center; margin-top: 16px; font-family: 'Cairo', sans-serif; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <div class="nav-bar">
+    <a href="HomePage.html" class="logo"><img src="../Image/loooo.png" /></a>
+    <ul>
+      <li><a href="AboutUsPage.html">معلومات عنا</a></li>
+      <li><a href="MyCoursePage.html">الدورات</a></li>
+      <li><a href="AccountPage.html">حسابي</a></li>
+      <li><a href="HomePage.html">الرئيسية</a></li>
+      <li><a href="#">|</a></li>
+      <li><a href="SignUpPage.html" class="signup">تسجيل دخول</a></li>
+      <li><a href="LoginPage.html" class="login">إنشاء حساب</a></li>
+    </ul>
+  </div>
+
+  <div class="page-container">
+    <div class="container">
+
+      <h2 class="section-title">تواصل معنا</h2>
+      <p style="color:var(--gray); margin-top:10px; margin-bottom:0;">نحن هنا لمساعدتك! أرسل لنا رسالة وسنرد عليك في أقرب وقت.</p>
+
+      <div class="contact-layout">
+
+        <!-- نموذج التواصل -->
+        <div class="contact-form-box">
+          <h2>أرسل لنا رسالة</h2>
+          <p>املأ النموذج أدناه وسنتواصل معك خلال 24 ساعة</p>
+
+          <label>الاسم الكامل</label>
+          <input class="form-control" type="text" placeholder="اسمك الكامل" id="nameInput">
+
+          <label>البريد الإلكتروني</label>
+          <input class="form-control" type="email" placeholder="بريدك الإلكتروني" id="emailInput">
+
+          <label>موضوع الرسالة</label>
+          <select class="form-control" style="cursor:pointer;">
+            <option value="">اختر الموضوع</option>
+            <option>استفسار عن دورة</option>
+            <option>مشكلة تقنية</option>
+            <option>الدفع والاشتراك</option>
+            <option>اقتراح أو شكوى</option>
+            <option>أخرى</option>
+          </select>
+
+          <label>الرسالة</label>
+          <textarea class="form-control" placeholder="اكتب رسالتك هنا..."></textarea>
+
+          <button class="btn-primary" style="width:100%; padding:14px; font-size:16px;" onclick="sendMessage()">إرسال الرسالة 📨</button>
+          <div class="success-msg" id="successMsg">✅ تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.</div>
+        </div>
+
+        <!-- معلومات التواصل -->
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon"><i class="fa fa-phone"></i></div>
+            <div class="info-text">
+              <h4>اتصل بنا</h4>
+              <p>01220245276+<br>متاح من 9 صباحاً إلى 5 مساءً</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fa fa-envelope"></i></div>
+            <div class="info-text">
+              <h4>البريد الإلكتروني</h4>
+              <p>asmaamohamed.menofia@gmail.com<br>نرد خلال 24 ساعة</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fa fa-facebook"></i></div>
+            <div class="info-text">
+              <h4>تابعنا على فيسبوك</h4>
+              <p>@Ibda3ak.platform<br>للأخبار والتحديثات</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fa fa-clock-o"></i></div>
+            <div class="info-text">
+              <h4>ساعات العمل</h4>
+              <p>السبت - الخميس<br>9:00 ص - 5:00 م</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- الأسئلة الشائعة -->
+      <div class="faq-section">
+        <h3 class="section-title" style="margin-bottom:24px;">الأسئلة الشائعة</h3>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">كيف يمكنني الوصول إلى الدورة بعد الشراء؟ <span class="faq-arrow">▼</span></div>
+          <div class="faq-a">بعد إتمام عملية الدفع، ستتمكن من الوصول الفوري للدورة من خلال صفحة "دوراتي" في حسابك.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">هل يمكنني استرداد أموالي؟ <span class="faq-arrow">▼</span></div>
+          <div class="faq-a">نعم، نوفر ضمان استرداد المال خلال 30 يوماً من تاريخ الشراء إذا لم تكن راضياً عن الدورة.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">هل الدورات تحتوي على شهادات؟ <span class="faq-arrow">▼</span></div>
+          <div class="faq-a">نعم! ستحصل على شهادة إتمام معتمدة بعد إنهاء كل دورة بنجاح يمكنك مشاركتها على LinkedIn.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">هل يمكنني مشاهدة الدروس أكثر من مرة؟ <span class="faq-arrow">▼</span></div>
+          <div class="faq-a">بالطبع! بعد الاشتراك تحصل على وصول مدى الحياة للدورة ويمكنك مشاهدتها في أي وقت.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-col1">
+      <h3>الدعم الفني</h3>
+      <a href="tel:+201220245276"><i class="fa fa-phone"></i>&nbsp;&nbsp;01220245276+</a>
+      <a href="mailto:asmaamohamed.menofia@gmail.com"><i class="fa fa-envelope"></i>&nbsp;&nbsp;asmaamohamed.menofia@gmail.com</a>
+    </div>
+    <div class="footer-col2">
+      <h3>روابط مفيدة</h3>
+      <a href="HomePage.html">الرئيسية</a>
+      <a href="MyCoursePage.html">دوراتي</a>
+      <a href="AccountPage.html">حسابي</a>
+      <a href="AboutUsPage.html">معلومات عنا</a>
+      <a href="ContactPage.html">تواصل معنا</a>
+    </div>
+    <div class="footer-col3">
+      <h3>تابعنا</h3>
+      <a href="https://www.facebook.com/"><i class="fa fa-facebook-f" style="color:#4267B2;"></i>&nbsp;&nbsp;فيسبوك</a>
+      <a href="https://twitter.com/"><i class="fa fa-twitter" style="color:#1DA1F2;"></i>&nbsp;&nbsp;تويتر</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleFaq(item) {
+      item.classList.toggle('open');
+    }
+    function sendMessage() {
+      document.getElementById('successMsg').style.display = 'block';
+      setTimeout(() => { document.getElementById('successMsg').style.display = 'none'; }, 4000);
+    }
+  </script>
+</body>
+</html>

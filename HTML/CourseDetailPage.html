@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>إبداعك - تفاصيل الكورس</title>
+  <link rel="stylesheet" href="../CSS/shared.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .course-hero { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: white; padding: 50px 40px; border-radius: 20px; margin-bottom: 30px; display: flex; gap: 30px; align-items: center; flex-wrap: wrap; }
+    .course-hero-text { flex: 2; min-width: 280px; }
+    .course-hero-text h1 { font-family: 'Cairo', sans-serif; font-size: 32px; font-weight: 900; margin-bottom: 14px; }
+    .course-hero-text p { font-size: 16px; opacity: 0.9; line-height: 1.7; margin-bottom: 20px; }
+    .course-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+    .course-meta span { background: rgba(255,255,255,0.15); padding: 6px 14px; border-radius: 20px; font-size: 13px; }
+    .course-hero-price { flex: 1; min-width: 220px; background: white; color: var(--dark); border-radius: 16px; padding: 24px; text-align: center; }
+    .course-hero-price .price { font-family: 'Cairo', sans-serif; font-size: 36px; font-weight: 900; color: var(--primary); margin-bottom: 16px; }
+    .course-hero-price .old-price { text-decoration: line-through; color: var(--gray); font-size: 16px; margin-bottom: 8px; }
+    .rating { color: #f39c12; font-size: 18px; margin-bottom: 12px; }
+    .content-layout { display: flex; gap: 24px; flex-wrap: wrap; }
+    .main-content { flex: 2; min-width: 300px; }
+    .side-content { flex: 1; min-width: 240px; }
+    .info-card { background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow); margin-bottom: 20px; }
+    .info-card h3 { font-family: 'Cairo', sans-serif; font-size: 18px; font-weight: 700; color: var(--primary); margin-bottom: 16px; }
+    .lesson-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+    .lesson-item:last-child { border-bottom: none; }
+    .lesson-icon { color: var(--primary); margin-left: 8px; }
+    .lesson-duration { color: var(--gray); font-size: 12px; }
+    .what-you-learn li { padding: 8px 0; font-size: 14px; color: var(--dark); line-height: 1.6; }
+    .what-you-learn li::before { content: "✅ "; }
+    .instructor-card { display: flex; gap: 16px; align-items: center; }
+    .instructor-card img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
+    .instructor-info h4 { font-family: 'Cairo', sans-serif; font-weight: 700; }
+    .instructor-info p { color: var(--gray); font-size: 13px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .tag { background: var(--light); color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <div class="nav-bar">
+    <a href="HomePage.html" class="logo"><img src="../Image/loooo.png" /></a>
+    <ul>
+      <li><a href="AboutUsPage.html">معلومات عنا</a></li>
+      <li><a href="MyCoursePage.html">الدورات</a></li>
+      <li><a href="AccountPage.html">حسابي</a></li>
+      <li><a href="HomePage.html">الرئيسية</a></li>
+      <li><a href="#">|</a></li>
+      <li><a href="SignUpPage.html" class="signup">تسجيل دخول</a></li>
+      <li><a href="LoginPage.html" class="login">إنشاء حساب</a></li>
+    </ul>
+  </div>
+
+  <div class="page-container">
+    <div class="container">
+
+      <!-- هيرو الكورس -->
+      <div class="course-hero">
+        <div class="course-hero-text">
+          <h1>جرافيك ديزاين للمبتدئين</h1>
+          <p>تعلّم أساسيات التصميم الجرافيكي من الصفر حتى الاحتراف. ستتعلم استخدام أدوات التصميم الاحترافية وإنشاء تصاميم مذهلة.</p>
+          <div class="course-meta">
+            <span>⏱ 24 ساعة</span>
+            <span>📚 48 درس</span>
+            <span>🌐 عربي</span>
+            <span>📜 شهادة معتمدة</span>
+          </div>
+        </div>
+        <div class="course-hero-price">
+          <div class="old-price">$ 29.99</div>
+          <div class="price">$ 12.99</div>
+          <div class="rating">⭐⭐⭐⭐⭐ <small style="color:var(--gray);">(4.8)</small></div>
+          <button class="btn-primary" style="width:100%; margin-bottom:10px;" onclick="window.location.href='PaymentPage.html'">اشترِ الآن</button>
+          <button class="btn-outline" style="width:100%;" onclick="window.location.href='MyCoursePage.html'">جرّب مجاناً</button>
+          <p style="color:var(--gray); font-size:12px; margin-top:10px;">ضمان استرداد المال خلال 30 يوم</p>
+        </div>
+      </div>
+
+      <div class="content-layout">
+
+        <!-- المحتوى الرئيسي -->
+        <div class="main-content">
+
+          <div class="info-card">
+            <h3>ما ستتعلمه</h3>
+            <ul class="what-you-learn" style="list-style:none; padding:0;">
+              <li>أساسيات نظرية الألوان والتصميم</li>
+              <li>العمل على برنامج Adobe Photoshop</li>
+              <li>العمل على برنامج Adobe Illustrator</li>
+              <li>تصميم الشعارات والهوية البصرية</li>
+              <li>تصميم منشورات وسائل التواصل الاجتماعي</li>
+              <li>إنشاء مشاريع احترافية في نهاية الكورس</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>محتوى الكورس</h3>
+            <div class="lesson-item">
+              <span><i class="fa fa-play-circle lesson-icon"></i> مقدمة وتعريف بالكورس</span>
+              <span class="lesson-duration">10:00</span>
+            </div>
+            <div class="lesson-item">
+              <span><i class="fa fa-play-circle lesson-icon"></i> أساسيات نظرية الألوان</span>
+              <span class="lesson-duration">25:00</span>
+            </div>
+            <div class="lesson-item">
+              <span><i class="fa fa-play-circle lesson-icon"></i> واجهة Photoshop</span>
+              <span class="lesson-duration">30:00</span>
+            </div>
+            <div class="lesson-item">
+              <span><i class="fa fa-play-circle lesson-icon"></i> التعامل مع الطبقات</span>
+              <span class="lesson-duration">45:00</span>
+            </div>
+            <div class="lesson-item">
+              <span><i class="fa fa-lock lesson-icon" style="color:var(--gray);"></i> تصميم شعار (مدفوع)</span>
+              <span class="lesson-duration">60:00</span>
+            </div>
+            <div class="lesson-item">
+              <span><i class="fa fa-lock lesson-icon" style="color:var(--gray);"></i> مشروع نهائي (مدفوع)</span>
+              <span class="lesson-duration">90:00</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- الجانب -->
+        <div class="side-content">
+
+          <div class="info-card">
+            <h3>المدرّب</h3>
+            <div class="instructor-card">
+              <img src="../Image/prooo.png" alt="المدرّب">
+              <div class="instructor-info">
+                <h4>أسماء محمد</h4>
+                <p>مصممة جرافيك محترفة</p>
+                <p>⭐ 4.9 | 1,200 طالب</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>تفاصيل الكورس</h3>
+            <div class="lesson-item"><span>المستوى</span><span>مبتدئ</span></div>
+            <div class="lesson-item"><span>اللغة</span><span>العربية</span></div>
+            <div class="lesson-item"><span>عدد الدروس</span><span>48 درس</span></div>
+            <div class="lesson-item"><span>المدة الكلية</span><span>24 ساعة</span></div>
+            <div class="lesson-item"><span>آخر تحديث</span><span>2025</span></div>
+          </div>
+
+          <div class="info-card">
+            <h3>الوسوم</h3>
+            <div class="tags">
+              <span class="tag">جرافيك</span>
+              <span class="tag">تصميم</span>
+              <span class="tag">Photoshop</span>
+              <span class="tag">Illustrator</span>
+              <span class="tag">مبتدئ</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-col1">
+      <h3>الدعم الفني</h3>
+      <a href="tel:+201220245267"><i class="fa fa-phone"></i>&nbsp;&nbsp;01220245267+</a>
+      <a href="mailto:asmaamohamed.menofia@gmail.com"><i class="fa fa-envelope"></i>&nbsp;&nbsp;asmaamohamed.menofia@gmail.com</a>
+    </div>
+    <div class="footer-col2">
+      <h3>روابط مفيدة</h3>
+      <a href="HomePage.html">الرئيسية</a>
+      <a href="MyCoursePage.html">دوراتي</a>
+      <a href="AccountPage.html">حسابي</a>
+      <a href="AboutUsPage.html">معلومات عنا</a>
+    </div>
+    <div class="footer-col3">
+      <h3>تابعنا</h3>
+      <a href="https://www.facebook.com/"><i class="fa fa-facebook-f" style="color:#4267B2;"></i>&nbsp;&nbsp;فيسبوك</a>
+      <a href="https://twitter.com/"><i class="fa fa-twitter" style="color:#1DA1F2;"></i>&nbsp;&nbsp;تويتر</a>
+    </div>
+  </div>
+
+</body>
+</html>

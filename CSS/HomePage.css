@@ -1,0 +1,138 @@
+body{
+	margin: 0px;
+}
+.page-container{
+	margin: 0% 10% 0% 10%;
+}
+.noTextDec{
+	text-decoration:none;
+}
+.nav-bar {
+	padding: 0% 5% 0% 5%;
+	background-color: rgb(241, 203, 218);
+}
+.nav-bar ul {
+    list-style-type: none;
+	float: right;
+}
+
+.nav-bar li {
+    float: left;
+}
+
+.nav-bar li a {
+    display: inline-block;
+	color: rgb(250, 250, 250);
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+     font-weight: bold;
+}
+
+.nav-bar li a:hover {
+    color: rgb(0,135,201);
+}
+.logo {
+  height: 100px;
+  vertical-align: middle;
+}
+.login{
+	margin-left: 15px;
+	float:right;
+	color: rgb(17, 16, 16)!important;
+	background-color: rgb(255, 193, 255)!important;
+}
+.signup{
+	margin-left: 10px;
+	float:right;
+	border: 1px solid rgb(236, 240, 241);
+}
+.themeImage{
+	height: 100%; 
+	width: 100%; 
+	object-fit: contain;
+}
+td
+{
+    padding:0 15px 0 15px;
+}
+.card-group{
+	text-align:right;
+}
+.container {
+  display: flex;
+  justify-content: center; /* لتوسيط الكروت أفقيًا */
+  flex-wrap: wrap;         /* لو أكتر من كارت */
+  gap: 20px;               /* مسافة بين الكروت */
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width:100%;
+	height:390px;
+	cursor: pointer;
+}
+.course-image{
+	width:214px;
+	height: 200px;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card-content {
+    padding: 2px 16px;
+	text-align: justify;
+}
+
+.footer {
+  padding: 2% 10%;
+  background-color: #364150;
+  display: flex;            /* يخلي العناصر جنب بعض */
+  justify-content: space-between; /* يوزعهم بالتساوي */
+  align-items: flex-start;  /* يخليهم من فوق */
+  color: white;
+  flex-wrap: wrap;          /* عشان ما يخرجوش برا الشاشة */
+}
+
+.footer div {
+  flex: 1;                  /* يخلي كل عمود ياخد مساحة متساوية */
+  margin: 0 10px;           /* مسافة بسيطة بين الأعمدة */
+}
+
+.footer-col1 a, 
+.footer-col2 a, 
+.footer-col3 a {
+  color: white;	
+  padding: 5px;
+  text-align: left;
+  display: block;
+  text-decoration: none;
+}
+
+.footer-col1 a:hover, 
+.footer-col2 a:hover,
+.footer-col3 a:hover {
+  color: rgb(0,135,201);
+}
+
+/* للموبايل */
+@media all and (max-width: 767px) {
+  .footer {
+    flex-direction: column; /* يخلي الأعمدة تحت بعض في الشاشات الصغيرة */
+    text-align: center;
+  }
+}
+body {
+  background-color: #f8e8e8; /* غيّري اللون اللي يعجبك */
+}
+h4 {
+  text-align: right;     /* يخلي العنوان على اليمين */
+  font-weight: bold;     /* يخليه بولد */
+  color: #007bff;        /* غيّري اللون اللي يعجبك */
+}
+
+p {
+  text-align: right;     /* يخلي النص على اليمين */
+  font-weight: bold;     /* يخليه بولد */
+  color: #333333;        /* لون النص */
+}

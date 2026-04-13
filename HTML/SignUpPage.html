@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>إبداعك - إنشاء حساب</title>
+  <link rel="stylesheet" href="../CSS/shared.css">
+  <link rel="stylesheet" href="../CSS/LoginPage.css">
+  <style>
+    body { background: linear-gradient(135deg, #f8f4f0 0%, #fde8e8 100%); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; }
+    .logo { margin-bottom: 30px; }
+    .logo img { height: 60px; }
+    .signup-box {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      width: 100%;
+      max-width: 460px;
+      box-shadow: 0 8px 40px rgba(151,7,10,0.15);
+      text-align: center;
+    }
+    .signup-box h2 { font-family: 'Cairo', sans-serif; font-size: 26px; font-weight: 900; color: var(--primary); margin-bottom: 6px; }
+    .signup-box p { color: var(--gray); margin-bottom: 24px; font-size: 14px; }
+    .name-row { display: flex; gap: 12px; }
+    .name-row .form-control { flex: 1; }
+    .terms-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 20px; text-align: right; }
+    .terms-row label { color: var(--gray); font-size: 13px; line-height: 1.5; }
+    .terms-row a { color: var(--primary); text-decoration: none; font-weight: 600; }
+    .btn-full { width: 100%; padding: 14px; font-size: 16px; border-radius: 10px; }
+    .login-link { display: block; text-align: center; color: var(--primary); font-weight: 700; font-family: 'Cairo', sans-serif; text-decoration: none; margin-top: 14px; font-size: 14px; }
+    .login-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <a href="HomePage.html"><img src="../Image/loooo.png"/></a>
+  </div>
+
+  <div class="signup-box">
+    <h2>إنشاء حساب جديد</h2>
+    <p>أدخل بياناتك الشخصية أدناه للبدء</p>
+
+    <div class="name-row">
+      <input class="form-control" type="text" placeholder="الاسم الأول" name="firstName">
+      <input class="form-control" type="text" placeholder="الاسم الأخير" name="lastName">
+    </div>
+    <input class="form-control" type="email" placeholder="البريد الإلكتروني" name="email">
+    <input class="form-control" type="password" placeholder="كلمة المرور" name="password">
+    <input class="form-control" type="password" placeholder="تأكيد كلمة المرور" name="retypedPassword">
+
+    <div class="terms-row">
+      <input type="checkbox" id="agreeTerms" name="agreeTerms" style="margin-top:4px;">
+      <label for="agreeTerms">
+        بالتسجيل، فأنت توافق على
+        <a href="#">الشروط والأحكام</a>
+        و
+        <a href="#">سياسة الخصوصية</a>
+      </label>
+    </div>
+
+    <button class="btn-primary btn-full" onclick="window.location.href='HomePage.html'">إنشاء الحساب</button>
+    <a class="login-link" href="LoginPage.html">لديك حساب بالفعل؟ سجّل دخولك</a>
+  </div>
+</body>
+</html>

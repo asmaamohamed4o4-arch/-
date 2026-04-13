@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>إبداعك - الدفع</title>
+  <link rel="stylesheet" href="../CSS/shared.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body { background: linear-gradient(135deg, #f8f4f0 0%, #fde8e8 100%); min-height: 100vh; }
+    .payment-layout { display: flex; gap: 30px; margin-top: 30px; flex-wrap: wrap; }
+    .payment-form-box { flex: 2; min-width: 300px; background: white; border-radius: 20px; padding: 36px; box-shadow: var(--shadow); }
+    .order-summary { flex: 1; min-width: 260px; }
+    .summary-card { background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow); margin-bottom: 20px; }
+    .summary-card h3 { font-family: 'Cairo', sans-serif; font-size: 18px; font-weight: 700; color: var(--primary); margin-bottom: 16px; border-bottom: 2px solid var(--border); padding-bottom: 12px; }
+    .summary-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+    .summary-row:last-child { border-bottom: none; font-weight: 700; font-size: 16px; color: var(--primary); }
+    .payment-form-box h2 { font-family: 'Cairo', sans-serif; font-size: 22px; font-weight: 900; color: var(--dark); margin-bottom: 6px; }
+    .payment-form-box p { color: var(--gray); font-size: 14px; margin-bottom: 24px; }
+    .payment-form-box label { display: block; font-weight: 600; font-size: 13px; color: var(--dark); margin-bottom: 6px; }
+    .card-row { display: flex; gap: 12px; }
+    .card-row .form-control { flex: 1; }
+    .payment-methods { display: flex; gap: 10px; margin-bottom: 20px; }
+    .method-btn { flex: 1; padding: 12px; border: 2px solid var(--border); border-radius: 10px; background: white; cursor: pointer; text-align: center; font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; transition: all 0.2s; }
+    .method-btn.active { border-color: var(--primary); color: var(--primary); background: #fff0f0; }
+    .method-btn:hover { border-color: var(--primary); }
+    .secure-badge { display: flex; align-items: center; gap: 8px; color: var(--gray); font-size: 12px; margin-top: 14px; }
+    .success-overlay { display: none; position: fixed; top:0;left:0;width:100%;height:100%; background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content: center; }
+    .success-box { background: white; border-radius: 20px; padding: 50px; text-align: center; max-width: 400px; animation: popIn 0.4s ease; }
+    @keyframes popIn { from { transform: scale(0.7); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .success-icon { font-size: 64px; margin-bottom: 16px; }
+    .success-box h2 { font-family: 'Cairo', sans-serif; font-size: 24px; color: #27ae60; margin-bottom: 10px; }
+    .success-box p { color: var(--gray); font-size: 15px; margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+
+  <div class="nav-bar">
+    <a href="HomePage.html" class="logo"><img src="../Image/loooo.png" /></a>
+    <ul>
+      <li><a href="AboutUsPage.html">معلومات عنا</a></li>
+      <li><a href="MyCoursePage.html">الدورات</a></li>
+      <li><a href="AccountPage.html">حسابي</a></li>
+      <li><a href="HomePage.html">الرئيسية</a></li>
+      <li><a href="#">|</a></li>
+      <li><a href="SignUpPage.html" class="signup">تسجيل دخول</a></li>
+      <li><a href="LoginPage.html" class="login">إنشاء حساب</a></li>
+    </ul>
+  </div>
+
+  <div class="page-container">
+    <div class="container">
+      <h2 class="section-title">إتمام الدفع</h2>
+
+      <div class="payment-layout">
+
+        <!-- نموذج الدفع -->
+        <div class="payment-form-box">
+          <h2>بيانات الدفع</h2>
+          <p>أدخل بيانات بطاقتك بأمان لإتمام عملية الشراء</p>
+
+          <div class="payment-methods">
+            <button class="method-btn active" onclick="selectMethod(this)">💳 بطاقة ائتمان</button>
+            <button class="method-btn" onclick="selectMethod(this)">🏦 بطاقة خصم</button>
+            <button class="method-btn" onclick="selectMethod(this)">📱 فودافون كاش</button>
+          </div>
+
+          <label>اسم حامل البطاقة</label>
+          <input class="form-control" type="text" placeholder="الاسم كما هو مكتوب على البطاقة">
+
+          <label>رقم البطاقة</label>
+          <input class="form-control" type="text" placeholder="0000 0000 0000 0000" maxlength="19" id="cardNum" oninput="formatCard(this)">
+
+          <div class="card-row">
+            <div>
+              <label>تاريخ الانتهاء</label>
+              <input class="form-control" type="text" placeholder="MM/YY" maxlength="5">
+            </div>
+            <div>
+              <label>رمز CVV</label>
+              <input class="form-control" type="password" placeholder="***" maxlength="3">
+            </div>
+          </div>
+
+          <button class="btn-primary" style="width:100%; padding:16px; font-size:16px; margin-top:10px;" onclick="showSuccess()">
+            ادفع الآن 💳
+          </button>
+
+          <div class="secure-badge">
+            <i class="fa fa-lock" style="color:var(--primary);"></i>
+            الدفع مشفّر وآمن بالكامل
+          </div>
+        </div>
+
+        <!-- ملخص الطلب -->
+        <div class="order-summary">
+          <div class="summary-card">
+            <h3>ملخص الطلب</h3>
+            <div class="summary-row"><span>جرافيك ديزاين</span><span>$ 12.99</span></div>
+            <div class="summary-row"><span>خصم (10%)</span><span style="color:green;">- $ 1.30</span></div>
+            <div class="summary-row"><span>الإجمالي</span><span>$ 11.69</span></div>
+          </div>
+
+          <div class="summary-card">
+            <h3>كود الخصم</h3>
+            <input class="form-control" type="text" placeholder="أدخل كود الخصم هنا">
+            <button class="btn-outline" style="width:100%;">تطبيق</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة النجاح -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-box">
+      <div class="success-icon">✅</div>
+      <h2>تمّت عملية الدفع بنجاح!</h2>
+      <p>يمكنك الآن الوصول إلى دورتك والبدء في التعلّم فوراً</p>
+      <button class="btn-primary" onclick="window.location.href='MyCoursePage.html'">ابدأ التعلّم الآن</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-col1">
+      <h3>الدعم الفني</h3>
+      <a href="tel:+201220245267"><i class="fa fa-phone"></i>&nbsp;&nbsp;01220245267+</a>
+      <a href="mailto:asmaamohamed.menofia@gmail.com"><i class="fa fa-envelope"></i>&nbsp;&nbsp;asmaamohamed.menofia@gmail.com</a>
+    </div>
+    <div class="footer-col2">
+      <h3>روابط مفيدة</h3>
+      <a href="HomePage.html">الرئيسية</a>
+      <a href="MyCoursePage.html">دوراتي</a>
+      <a href="AccountPage.html">حسابي</a>
+      <a href="AboutUsPage.html">معلومات عنا</a>
+    </div>
+    <div class="footer-col3">
+      <h3>تابعنا</h3>
+      <a href="https://www.facebook.com/"><i class="fa fa-facebook-f" style="color:#4267B2;"></i>&nbsp;&nbsp;فيسبوك</a>
+      <a href="https://twitter.com/"><i class="fa fa-twitter" style="color:#1DA1F2;"></i>&nbsp;&nbsp;تويتر</a>
+    </div>
+  </div>
+
+  <script>
+    function selectMethod(btn) {
+      document.querySelectorAll('.method-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    function formatCard(input) {
+      let val = input.value.replace(/\D/g,'').substring(0,16);
+      input.value = val.replace(/(.{4})/g,'$1 ').trim();
+    }
+    function showSuccess() {
+      document.getElementById('successOverlay').style.display = 'flex';
+    }
+  </script>
+</body>
+</html>

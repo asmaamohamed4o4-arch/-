@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>إبداعك - حسابي</title>
+  <link rel="stylesheet" href="../CSS/shared.css">
+  <link rel="stylesheet" href="../CSS/HomePage.css">
+  <link rel="stylesheet" href="../CSS/AccountPage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .profile-layout { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 20px; }
+    .profile-sidebar { background: white; border-radius: 16px; padding: 30px; text-align: center; min-width: 220px; box-shadow: var(--shadow); flex: 0 0 220px; }
+    .profile-sidebar img { width: 100px; height: 100px; border-radius: 50%; border: 4px solid var(--primary); object-fit: cover; margin-bottom: 14px; }
+    .profile-sidebar h4 { font-family: 'Cairo', sans-serif; font-size: 18px; font-weight: 700; color: var(--dark); }
+    .profile-sidebar p { color: var(--gray); font-size: 13px; margin-top: 4px; }
+    .profile-card { background: white; border-radius: 16px; padding: 30px; box-shadow: var(--shadow); flex: 1; min-width: 280px; }
+    .profile-card h3 { font-family: 'Cairo', sans-serif; font-size: 18px; font-weight: 700; color: var(--primary); margin-bottom: 20px; text-align: center; border-bottom: 2px solid var(--border); padding-bottom: 14px; }
+    .profile-card label { display: block; color: var(--dark); font-weight: 600; font-size: 13px; margin-bottom: 6px; }
+    .save-row { text-align: left; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <div class="nav-bar">
+    <a href="HomePage.html" class="logo"><img src="../Image/loooo.png" /></a>
+    <ul>
+      <li><a href="AboutUsPage.html">معلومات عنا</a></li>
+      <li><a href="MyCoursePage.html">الدورات</a></li>
+      <li><a href="AccountPage.html">حسابي</a></li>
+      <li><a href="HomePage.html">الرئيسية</a></li>
+      <li><a href="#">|</a></li>
+      <li><a href="SignUpPage.html" class="signup">تسجيل دخول</a></li>
+      <li><a href="LoginPage.html" class="login">إنشاء حساب</a></li>
+    </ul>
+  </div>
+
+  <div class="page-container">
+    <div class="container">
+
+      <h2 class="section-title" style="margin-bottom:24px;">ملف حسابي</h2>
+
+      <div class="profile-layout">
+
+        <!-- الصورة الشخصية -->
+        <div class="profile-sidebar">
+          <img src="../Image/prooo.png" alt="صورة المستخدم">
+          <h4>أسماء محمد</h4>
+          <p>طالبة</p>
+          <br>
+          <button class="btn-outline" style="width:100%; font-size:13px;">تغيير الصورة</button>
+        </div>
+
+        <!-- بيانات الملف الشخصي -->
+        <div class="profile-card">
+          <h3>البيانات الشخصية</h3>
+          <label>الاسم الأول</label>
+          <input class="form-control" type="text" value="أسماء" name="firstName">
+          <label>الاسم الأخير</label>
+          <input class="form-control" type="text" value="محمد" name="lastName">
+          <label>البريد الإلكتروني</label>
+          <input class="form-control" type="email" value="asmaamohamed.menofia@gmail.com" name="email">
+          <label>كلمة المرور</label>
+          <input class="form-control" type="password" value="123456789" name="password">
+          <div class="save-row">
+            <button class="btn-primary" onclick="alert('تم حفظ البيانات بنجاح ✅')">حفظ التغييرات</button>
+          </div>
+        </div>
+
+        <!-- بيانات الدفع -->
+        <div class="profile-card">
+          <h3>بيانات الدفع</h3>
+          <label>رقم البطاقة (خصم / ائتمان)</label>
+          <input class="form-control" type="text" value="9876 7896 0900 7677" name="cardNumber">
+          <label>الاسم على البطاقة</label>
+          <input class="form-control" type="text" value="Asmaa Mohamed" name="cardName">
+          <label>تاريخ الانتهاء</label>
+          <input class="form-control" type="text" value="01/2025" name="expiry">
+          <label>رمز CVV</label>
+          <input class="form-control" type="password" value="234" name="cvv">
+          <div class="save-row">
+            <button class="btn-primary" onclick="window.location.href='PaymentPage.html'">الذهاب للدفع</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-col1">
+      <h3>الدعم الفني</h3>
+      <a href="tel:+201220245267"><i class="fa fa-phone"></i>&nbsp;&nbsp;01220245267+</a>
+      <a href="mailto:asmaamohamed.menofia@gmail.com"><i class="fa fa-envelope"></i>&nbsp;&nbsp;asmaamohamed.menofia@gmail.com</a>
+    </div>
+    <div class="footer-col2">
+      <h3>روابط مفيدة</h3>
+      <a href="HomePage.html">الرئيسية</a>
+      <a href="MyCoursePage.html">دوراتي</a>
+      <a href="AccountPage.html">حسابي</a>
+      <a href="AboutUsPage.html">معلومات عنا</a>
+      <a href="ContactPage.html">تواصل معنا</a>
+    </div>
+    <div class="footer-col3">
+      <h3>تابعنا</h3>
+      <a href="https://www.facebook.com/"><i class="fa fa-facebook-f" style="color:#4267B2;"></i>&nbsp;&nbsp;فيسبوك</a>
+      <a href="https://twitter.com/"><i class="fa fa-twitter" style="color:#1DA1F2;"></i>&nbsp;&nbsp;تويتر</a>
+    </div>
+  </div>
+
+</body>
+</html>

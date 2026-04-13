@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>إبداعك - دوراتي</title>
+  <link rel="stylesheet" href="../CSS/shared.css">
+  <link rel="stylesheet" href="../CSS/HomePage.css">
+  <link rel="stylesheet" href="../CSS/MyCoursePage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .course-layout { display: flex; gap: 24px; margin-top: 20px; flex-wrap: wrap; }
+    .video-section { flex: 2; min-width: 300px; }
+    .video-card { background: white; border-radius: 16px; padding: 20px; box-shadow: var(--shadow); }
+    .video-card h2 { font-family: 'Cairo', sans-serif; font-size: 18px; color: var(--primary); margin-bottom: 14px; }
+    .video-card video { width: 100%; border-radius: 10px; }
+    .list-section { flex: 1; min-width: 260px; }
+    .list-card { background: white; border-radius: 16px; padding: 20px; box-shadow: var(--shadow); max-height: 500px; overflow-y: auto; }
+    .list-card h2 { font-family: 'Cairo', sans-serif; font-size: 18px; text-align: center; color: var(--dark); margin-bottom: 16px; border-bottom: 2px solid var(--border); padding-bottom: 12px; }
+    .accordion {
+      background: var(--light); color: var(--dark);
+      font-family: 'Cairo', sans-serif; font-weight: 700;
+      cursor: pointer; padding: 12px 16px; width: 100%;
+      border: none; text-align: right; outline: none;
+      border-radius: 8px; margin-bottom: 6px; font-size: 14px;
+      transition: background 0.2s;
+    }
+    .accordion:hover, .accordion.active { background: var(--primary); color: white; }
+    .panel { display: none; padding: 0 8px 8px; }
+    .panel a { display: block; padding: 8px 14px; color: var(--gray); text-decoration: none; font-size: 13px; border-radius: 6px; transition: all 0.2s; }
+    .panel a:hover { background: var(--light); color: var(--primary); }
+    .progress-bar { background: var(--border); border-radius: 10px; height: 8px; margin: 14px 0; }
+    .progress-fill { background: linear-gradient(90deg, var(--primary), var(--accent)); height: 100%; border-radius: 10px; width: 35%; }
+    .progress-label { font-size: 13px; color: var(--gray); text-align: left; }
+  </style>
+</head>
+<body>
+
+  <div class="nav-bar">
+    <a href="HomePage.html" class="logo"><img src="../Image/loooo.png" /></a>
+    <ul>
+      <li><a href="AboutUsPage.html">معلومات عنا</a></li>
+      <li><a href="MyCoursePage.html">الدورات</a></li>
+      <li><a href="AccountPage.html">حسابي</a></li>
+      <li><a href="HomePage.html">الرئيسية</a></li>
+      <li><a href="#">|</a></li>
+      <li><a href="SignUpPage.html" class="signup">تسجيل دخول</a></li>
+      <li><a href="LoginPage.html" class="login">إنشاء حساب</a></li>
+    </ul>
+  </div>
+
+  <div class="page-container">
+    <div class="container">
+
+      <h2 class="section-title" style="margin-bottom:20px;">دوراتي</h2>
+
+      <!-- شريط التقدم -->
+      <p style="color:var(--gray); font-size:14px; margin-bottom:6px;">تقدمك في الدورة: 35%</p>
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+
+      <div class="course-layout">
+
+        <!-- الفيديو -->
+        <div class="video-section">
+          <div class="video-card">
+            <h2>الفصل الأول: مقدمة</h2>
+            <video controls>
+              <source src="../Image/introduction.mp4" type="video/mp4">
+              متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+          </div>
+        </div>
+
+        <!-- قائمة الدروس -->
+        <div class="list-section">
+          <div class="list-card">
+            <h2>محتوى الدورة</h2>
+
+            <button class="accordion">لغة #C</button>
+            <div class="panel">
+              <a href="#">مقدمة</a>
+              <a href="#">الفصل الأول</a>
+              <a href="#">الفصل الثاني</a>
+              <a href="#">الفصل الثالث</a>
+              <a href="#">الفصل الرابع</a>
+              <a href="#">اختبار</a>
+            </div>
+
+            <button class="accordion">جافا Java</button>
+            <div class="panel">
+              <a href="#">مقدمة</a>
+              <a href="#">الفصل الأول</a>
+              <a href="#">الفصل الثاني</a>
+              <a href="#">الفصل الثالث</a>
+              <a href="#">الفصل الرابع</a>
+              <a href="#">اختبار</a>
+            </div>
+
+            <button class="accordion">Node.js</button>
+            <div class="panel">
+              <a href="#">مقدمة</a>
+              <a href="#">الفصل الأول</a>
+              <a href="#">الفصل الثاني</a>
+              <a href="#">الفصل الثالث</a>
+              <a href="#">الفصل الرابع</a>
+              <a href="#">اختبار</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-col1">
+      <h3>الدعم الفني</h3>
+      <a href="tel:+201220245267"><i class="fa fa-phone"></i>&nbsp;&nbsp;01220245267+</a>
+      <a href="mailto:asmaamohamed.menofia@gmail.com"><i class="fa fa-envelope"></i>&nbsp;&nbsp;asmaamohamed.menofia@gmail.com</a>
+    </div>
+    <div class="footer-col2">
+      <h3>روابط مفيدة</h3>
+      <a href="HomePage.html">الرئيسية</a>
+      <a href="MyCoursePage.html">دوراتي</a>
+      <a href="AccountPage.html">حسابي</a>
+      <a href="AboutUsPage.html">معلومات عنا</a>
+      <a href="ContactPage.html">تواصل معنا</a>
+    </div>
+    <div class="footer-col3">
+      <h3>تابعنا</h3>
+      <a href="https://www.facebook.com/"><i class="fa fa-facebook-f" style="color:#4267B2;"></i>&nbsp;&nbsp;فيسبوك</a>
+      <a href="https://twitter.com/"><i class="fa fa-twitter" style="color:#1DA1F2;"></i>&nbsp;&nbsp;تويتر</a>
+    </div>
+  </div>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    }
+  </script>
+</body>
+</html>

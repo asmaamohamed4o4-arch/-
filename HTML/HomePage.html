@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>إبداعك - الرئيسية</title>
+  <link rel="stylesheet" href="../CSS/shared.css">
+  <link rel="stylesheet" href="../CSS/HomePage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .courses-grid { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 30px; }
+    .price-tag { background: var(--primary); color: white; padding: 4px 10px; border-radius: 20px; font-size: 13px; font-weight: 700; display: inline-block; margin-top: 8px; }
+    .hero-section { text-align: center; padding: 40px 20px; }
+    .hero-section img { max-width: 100%; border-radius: 16px; box-shadow: var(--shadow); }
+  </style>
+</head>
+<body>
+
+  <!-- شاشة التحميل -->
+  <div id="loading-screen">
+    <img src="../Image/9.gif" alt="جارٍ التحميل..." style="width:200px;height:200px;">
+    <h2>إبداعك... يُحمَّل</h2>
+  </div>
+
+  <div class="nav-bar">
+    <a href="HomePage.html" class="logo">
+      <img src="../Image/loooo.png" />
+    </a>
+    <ul>
+      <li><a href="AboutUsPage.html">معلومات عنا</a></li>
+      <li><a href="MyCoursePage.html">الدورات</a></li>
+      <li><a href="AccountPage.html">حسابي</a></li>
+      <li><a href="HomePage.html">الرئيسية</a></li>
+      <li><a href="#">|</a></li>
+      <li><a href="SignUpPage.html" class="signup">تسجيل دخول</a></li>
+      <li><a href="LoginPage.html" class="login">إنشاء حساب</a></li>
+    </ul>
+  </div>
+
+  <div class="page-container" id="mainContent" style="display:none;">
+    <div class="container">
+
+      <div class="hero-section">
+        <img src="../Image/1.png" class="themeImage"/>
+      </div>
+
+      <br>
+
+      <!-- قسم الدورات -->
+      <h3 class="section-title">الدورات المتاحة</h3>
+      <br>
+      <div class="courses-grid">
+
+        <div class="card" onclick="window.location.href='CourseDetailPage.html?course=graphic'" style="cursor:pointer;">
+          <img src="../Image/2.jpeg" class="course-image">
+          <div class="card-content">
+            <h4><b>جرافيك ديزاين</b></h4>
+            <p>أساسيات للمبتدئين - تعلم أساسيات الجرافيك من الصفر.</p>
+            <span class="price-tag">$ 12.99</span>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='CourseDetailPage.html?course=programming'" style="cursor:pointer;">
+          <img src="../Image/3.jpeg" class="course-image">
+          <div class="card-content">
+            <h4><b>برمجة الحاسوب</b></h4>
+            <p>عملية كتابة تعليمات وأوامر تمكن الحاسوب من تنفيذ المهام وحل المشكلات بدقة وسرعة.</p>
+            <span class="price-tag">$ 12.99</span>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='CourseDetailPage.html?course=ai'" style="cursor:pointer;">
+          <img src="../Image/4.jpeg" class="course-image">
+          <div class="card-content">
+            <h4><b>الذكاء الاصطناعي</b></h4>
+            <p>هو قدرة الآلات على محاكاة التفكير البشري والتعلّم واتخاذ القرارات بذكاء يشبه الإنسان.</p>
+            <span class="price-tag">$ 12.99</span>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='CourseDetailPage.html?course=networks'" style="cursor:pointer;">
+          <img src="../Image/5.jpeg" class="course-image">
+          <div class="card-content">
+            <h4><b>شبكات الحاسوب</b></h4>
+            <p>نظام يربط بين أجهزة متعددة لتبادل البيانات والموارد بسهولة وسرعة.</p>
+            <span class="price-tag">$ 12.99</span>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='CourseDetailPage.html?course=security'" style="cursor:pointer;">
+          <img src="../Image/6.jpeg" class="course-image">
+          <div class="card-content">
+            <h4><b>الأمن السيبراني</b></h4>
+            <p>الدرع الذي يحمي المعلومات والأنظمة من الهجمات والاختراقات في العالم الرقمي.</p>
+            <span class="price-tag">$ 12.99</span>
+          </div>
+        </div>
+
+      </div>
+
+      <br>
+      <h3 class="section-title">الأكثر تحميلاً</h3>
+      <br>
+      <div class="courses-grid">
+
+        <div class="card" onclick="window.location.href='CourseDetailPage.html?course=sysadmin'" style="cursor:pointer;">
+          <img src="../Image/9.gif" class="course-image">
+          <div class="card-content">
+            <h4><b>إدارة الأنظمة</b></h4>
+            <p>تنظيم ومراقبة مكونات الحاسوب لضمان عملها بكفاءة واستقرار لتحقيق أفضل أداء للنظام.</p>
+            <span class="price-tag">$ 12.99</span>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='CourseDetailPage.html?course=cloud'" style="cursor:pointer;">
+          <img src="../Image/7.gif" class="course-image">
+          <div class="card-content">
+            <h4><b>الحوسبة السحابية</b></h4>
+            <p>تقنية تتيح تخزين البيانات وتشغيل البرامج عبر الإنترنت بمرونة وكفاءة عالية.</p>
+            <span class="price-tag">$ 12.99</span>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='CourseDetailPage.html?course=data'" style="cursor:pointer;">
+          <img src="../Image/8.gif" class="course-image">
+          <div class="card-content">
+            <h4><b>تحليل البيانات</b></h4>
+            <p>فحص وتنظيم البيانات لاستخلاص معلومات مفيدة تساعد في اتخاذ القرارات.</p>
+            <span class="price-tag">$ 12.99</span>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='CourseDetailPage.html?course=montage'" style="cursor:pointer;">
+          <img src="../Image/10.jpg" class="course-image">
+          <div class="card-content">
+            <h4><b>المونتاج</b></h4>
+            <p>ترتيب وتنسيق اللقطات والصور والفيديوهات لإنتاج عمل مرئي متكامل يعبر عن فكرة أو قصة.</p>
+            <span class="price-tag">$ 12.99</span>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='CourseDetailPage.html?course=webdev'" style="cursor:pointer;">
+          <img src="../Image/11.jpg" class="course-image">
+          <div class="card-content">
+            <h4><b>تطوير الويب</b></h4>
+            <p>إنشاء وتصميم وتشغيل المواقع والتطبيقات على الإنترنت باستخدام لغات وتقنيات برمجية.</p>
+            <span class="price-tag">$ 12.99</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-col1">
+      <h3>الدعم الفني</h3>
+      <a href="tel:+201220245276"><i class="fa fa-phone"></i>&nbsp;&nbsp;01220245276+</a>
+      <a href="mailto:asmaamohamed.menofia@gmail.com"><i class="fa fa-envelope"></i>&nbsp;&nbsp;asmaamohamed.menofia@gmail.com</a>
+    </div>
+    <div class="footer-col2">
+      <h3>روابط مفيدة</h3>
+      <a href="HomePage.html">الرئيسية</a>
+      <a href="MyCoursePage.html">دوراتي</a>
+      <a href="AccountPage.html">حسابي</a>
+      <a href="AboutUsPage.html">معلومات عنا</a>
+      <a href="ContactPage.html">تواصل معنا</a>
+    </div>
+    <div class="footer-col3">
+      <h3>تابعنا</h3>
+      <a href="https://www.facebook.com/"><i class="fa fa-facebook-f" style="color:#4267B2;"></i>&nbsp;&nbsp;فيسبوك</a>
+      <a href="https://twitter.com/"><i class="fa fa-twitter" style="color:#1DA1F2;"></i>&nbsp;&nbsp;تويتر</a>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("loading-screen").style.display = "none";
+        document.getElementById("mainContent").style.display = "block";
+      }, 2500);
+    });
+  </script>
+</body>
+</html>
